@@ -16,6 +16,13 @@ Currently supported Zabbix keys:
     
 Zabbix keys are in format "riak.{key name}"
 
+Usage:
+
+    $listen_ip = $::ipaddress_eth0
+    riak_zabbix::zabbix { "zabbix-riak":
+       riak_listen_ip => $listen_ip
+    }
+
 Currently works only on RHEL6.
 
 Project in Puppet forge: http://forge.puppetlabs.com/tomitakussaari/riak_zabbix
