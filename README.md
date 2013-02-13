@@ -19,8 +19,11 @@ Zabbix keys are in format "riak.{key name}"
 Usage:
 
     $listen_ip = $::ipaddress_eth0
+    $zabbix_server = "zabbix.mycompany.com"
+    
     riak_zabbix::zabbix { "zabbix-riak":
-       riak_listen_ip => $listen_ip
+       riak_listen_ip => $listen_ip,
+       zabbix_server => $zabbix_server
     }
 
 Currently works only on RHEL6.
