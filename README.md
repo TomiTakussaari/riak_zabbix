@@ -11,8 +11,11 @@ Currently supported Zabbix keys:
     riak.memory_processes_used
     riak.pbc_active
     
-Zabbix keys are riak.{key name}
-
+Zabbix keys are in format riak.{key name}
 Expects that "riak_kv_stat" is enabled on your Riak instance! 
+
+Project in Puppet forge: http://forge.puppetlabs.com/tomitakussaari/riak_zabbix
+
+
 
 
