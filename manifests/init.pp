@@ -1,4 +1,4 @@
-define riak_zabbix::zabbix($riak_listen_ip){
+define riak_zabbix::zabbix($riak_listen_ip, $zabbix_server){
   	File {
 		owner => root,
 		group => root,
