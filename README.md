@@ -12,6 +12,7 @@ Currently supported Zabbix keys:
     riak.pbc_active
     
 Zabbix keys are in format riak.{key name}
+
 Expects that "riak_kv_stat" is enabled on your Riak instance! 
 
 Currently works only on RHEL6.
