@@ -1,4 +1,4 @@
-define zabbix_riak::zabbix_riak($riak_listen_ip){
+define riak_zabbix::zabbix($riak_listen_ip){
   	File {
 		owner => root,
 		group => root,
@@ -17,7 +17,7 @@ define zabbix_riak::zabbix_riak($riak_listen_ip){
   	}
 
 	file { "/etc/zabbix/zabbix_agentd.conf":
-		content => template("zabbix/etc/zabbix/zabbix_agentd.conf.erb"),
+		content => template("riak_zabbix/etc/zabbix/zabbix_agentd.conf.erb"),
 		ensure => present,
 	}
 
