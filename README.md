@@ -14,6 +14,8 @@ Currently supported Zabbix keys:
 Zabbix keys are in format riak.{key name}
 Expects that "riak_kv_stat" is enabled on your Riak instance! 
 
+Currently works only on RHEL6.
+
 Project in Puppet forge: http://forge.puppetlabs.com/tomitakussaari/riak_zabbix
 
 
