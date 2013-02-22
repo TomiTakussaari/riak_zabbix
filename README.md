@@ -13,8 +13,11 @@ Currently supported Zabbix keys:
     riak.memory_total
     riak.memory_processes_used
     riak.pbc_active
-    
-Zabbix keys are in format "riak.{key name}"
+    riak.pbc_connects
+    riak.node_gets
+    riak.node_puts
+    riak.node_get_fsm_time_median
+    riak.node_put_fsm_time_median
 
 Usage:
 
