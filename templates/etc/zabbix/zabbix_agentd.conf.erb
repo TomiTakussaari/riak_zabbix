@@ -228,4 +228,8 @@ UserParameter=riak.ring_num_partitions,curl -s http://<%= listen_ip %>:8098/stat
 UserParameter=riak.memory_total,curl -s http://<%= listen_ip %>:8098/stats -H "Accept: text/plain" 2> /dev/null | grep memory_total  | awk -F":" '{ print $2 }' | awk -F"," '{print $1}'
 UserParameter=riak.memory_processes_used,curl -s http://<%= listen_ip %>:8098/stats -H "Accept: text/plain" 2> /dev/null | grep memory_processes_used  | awk -F":" '{ print $2 }' | awk -F"," '{print $1}'
 UserParameter=riak.pbc_active,curl -s http://<%= listen_ip %>:8098/stats -H "Accept: text/plain" 2> /dev/null | grep pbc_active  | awk -F":" '{ print $2 }' | awk -F"," '{print $1}'
-
+UserParameter=riak.pbc_connects,curl -s http://<%= listen_ip %>:8098/stats -H "Accept: text/plain" 2> /dev/null | grep pbc_connects\" |  awk -F":" '{ print $2 }' | awk -F"," '{print $1}'
+UserParameter=riak.node_gets,curl -v http://<%= listen_ip %>:8098/stats -H "Accept: text/plain" 2> /dev/null | grep \"node_gets\" | awk -F":" '{ print $2 }' | awk -F"," '{print $1}'
+UserParameter=riak.node_puts,curl -v http://<%= listen_ip %>:8098/stats -H "Accept: text/plain" 2> /dev/null | grep \"node_puts\" | awk -F":" '{ print $2 }' | awk -F"," '{print $1}'
+UserParameter=riak.node_get_fsm_time_median,curl -v http://<%= listen_ip %>:8098/stats -H "Accept: text/plain" 2> /dev/null | grep node_get_fsm_time_median | awk -F":" '{ print $2 }' | awk -F"," '{print $1}'
+UserParameter=riak.node_put_fsm_time_median,curl -v http://<%= listen_ip %>:8098/stats -H "Accept: text/plain" 2> /dev/null | grep node_put_fsm_time_median | awk -F":" '{ print $2 }' | awk -F"," '{print $1}'
